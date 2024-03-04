@@ -1,0 +1,102 @@
+
+html {
+  overflow: auto; /* Enable scrolling */
+  scrollbar-width: thin; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 11 */
+}
+
+/* WebKit browsers (Chrome, Safari) */
+html::-webkit-scrollbar {
+  width: 0 !important; /* Hide scrollbar width */
+}
+
+/* WebKit browsers (Chrome, Safari) */
+html::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Hide scrollbar thumb */
+}
+
+body {
+  overflow: auto;
+  scrollbar-width: thin;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+
+.custom-shape-divider-top-1708163157 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1708163157 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 120px;
+}
+
+.custom-shape-divider-top-1708163157 .shape-fill {
+  fill: #5e9be5;
+}
+
+/* DASHBOARD */
+#dashboard-container {
+  height: calc(100vh - 50px);
+}
+
+#dashboard-container  #left {
+  width: 220px;
+}
+
+#dashboard-container  #rigth {
+  width: calc(100vw-220px);
+  overflow-x: auto;
+}
+
+
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-top-1708163157 svg {
+      width: calc(100% + 1.3px);
+      height: 77px;
+  }
+}
+
+.active {
+  font-weight: 900;
+}
+
+#loading {
+  position: absolute;
+}
+
+#loading-bar {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all;
+  animation: loadingAnimation 1s ease-in-out infinite;
+}
+
+@keyframes loadingAnimation {
+  from {
+      transform: translateX(-10vw);
+  }
+  to {
+      transform: translateX(100vw);
+  }
+}
